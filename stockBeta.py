@@ -15,8 +15,8 @@ def beta(stock, market):
     dmarket = market_df['Change'].values
     return np.cov(dstock, dmarket)[0][1]/np.var(dmarket)
 
-def getHistory(ticker):
-    ticker = yf.Ticker(ticker)
+def getHistory(symbol):
+    ticker = yf.Ticker(symbol)
     ticker_data = ticker.history(period="max")
     ticker_data.reset_index(level=0, inplace=True)
     t = ticker_data.loc[:, ['Date', 'Close']]

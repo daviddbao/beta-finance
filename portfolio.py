@@ -3,4 +3,4 @@ holdings = {
     'shares': [5, 10] # corresponding number of shares
 }
 
-benchmark = "SPY"
+benchmark = "SPY" #pick a market index/ETF for benchmark
